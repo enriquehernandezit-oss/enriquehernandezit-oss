@@ -12,4 +12,4 @@ Finance meets AI. I build agentic AI tools that automate research, surface marke
 - 📧 enriquehernandezit@gmail.com
 - 🌐 Open to data analytics, AI engineering, and strategy roles
 
-![Terminal](terminal.svg)
+![Terminal](https://raw.githubusercontent.com/enriquehernandezit-oss/enriquehernandezit-oss/main/terminal.svg)
