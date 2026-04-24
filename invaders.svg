@@ -1,0 +1,166 @@
+<svg width="100%" viewBox="0 0 680 200" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Space Invaders animation</title>
+<desc>A modern neon-styled Space Invaders animation with glowing aliens and a sleek player cannon</desc>
+<style>
+  .aliens-group {
+    animation: march 1.6s steps(1, end) infinite;
+  }
+  @keyframes march {
+    0%,49%  { transform: translateX(0px); }
+    50%,100% { transform: translateX(14px); }
+  }
+  .alien-a { fill: #a259ff; }
+  .alien-b { fill: #00e5ff; }
+  .alien-c { fill: #00ff88; }
+  .cannon { fill: #ffffff; }
+  .bullet {
+    fill: #ffffff;
+    animation: fire 2s linear infinite;
+  }
+  @keyframes fire {
+    0%   { transform: translateY(0);      opacity: 1; }
+    70%  { transform: translateY(-115px); opacity: 1; }
+    71%  { opacity: 0; }
+    100% { transform: translateY(-115px); opacity: 0; }
+  }
+  .mystery {
+    fill: #ff3860;
+    animation: flyby 6s linear infinite;
+  }
+  @keyframes flyby {
+    0%   { transform: translateX(620px); opacity: 0; }
+    5%   { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { transform: translateX(-80px); opacity: 0; }
+  }
+  .star { fill: #ffffff; }
+  .star1 { animation: twinkle 2.1s ease-in-out infinite alternate; }
+  .star2 { animation: twinkle 1.4s ease-in-out infinite alternate; }
+  .star3 { animation: twinkle 3s ease-in-out infinite alternate; }
+  @keyframes twinkle {
+    from { opacity: 0.1; }
+    to   { opacity: 0.9; }
+  }
+  .shield { fill: #00ff88; opacity: 0.7; }
+  .hud { font-family: 'Courier New', monospace; font-size: 10px; letter-spacing: 0.1em; }
+  .scanline {
+    fill: none;
+    stroke: rgba(255,255,255,0.03);
+    stroke-width: 1;
+  }
+</style>
+
+<rect width="680" height="200" fill="#080810" rx="0"/>
+
+<!-- scanlines -->
+<line class="scanline" x1="0" y1="10"  x2="680" y2="10"/>
+<line class="scanline" x1="0" y1="20"  x2="680" y2="20"/>
+<line class="scanline" x1="0" y1="30"  x2="680" y2="30"/>
+<line class="scanline" x1="0" y1="40"  x2="680" y2="40"/>
+<line class="scanline" x1="0" y1="50"  x2="680" y2="50"/>
+<line class="scanline" x1="0" y1="60"  x2="680" y2="60"/>
+<line class="scanline" x1="0" y1="70"  x2="680" y2="70"/>
+<line class="scanline" x1="0" y1="80"  x2="680" y2="80"/>
+<line class="scanline" x1="0" y1="90"  x2="680" y2="90"/>
+<line class="scanline" x1="0" y1="100" x2="680" y2="100"/>
+<line class="scanline" x1="0" y1="110" x2="680" y2="110"/>
+<line class="scanline" x1="0" y1="120" x2="680" y2="120"/>
+<line class="scanline" x1="0" y1="130" x2="680" y2="130"/>
+<line class="scanline" x1="0" y1="140" x2="680" y2="140"/>
+<line class="scanline" x1="0" y1="150" x2="680" y2="150"/>
+<line class="scanline" x1="0" y1="160" x2="680" y2="160"/>
+<line class="scanline" x1="0" y1="170" x2="680" y2="170"/>
+<line class="scanline" x1="0" y1="180" x2="680" y2="180"/>
+<line class="scanline" x1="0" y1="190" x2="680" y2="190"/>
+
+<!-- stars -->
+<rect class="star star1" x="30"  y="15" width="2" height="2"/>
+<rect class="star star2" x="90"  y="8"  width="2" height="2"/>
+<rect class="star star3" x="150" y="20" width="2" height="2"/>
+<rect class="star star1" x="220" y="12" width="2" height="2"/>
+<rect class="star star2" x="290" y="6"  width="2" height="2"/>
+<rect class="star star3" x="360" y="18" width="2" height="2"/>
+<rect class="star star1" x="420" y="10" width="2" height="2"/>
+<rect class="star star2" x="500" y="22" width="2" height="2"/>
+<rect class="star star3" x="560" y="7"  width="2" height="2"/>
+<rect class="star star1" x="630" y="16" width="2" height="2"/>
+<rect class="star star2" x="70"  y="28" width="1" height="1"/>
+<rect class="star star3" x="400" y="30" width="1" height="1"/>
+<rect class="star star1" x="600" y="25" width="1" height="1"/>
+
+<!-- HUD -->
+<text class="hud" x="30"  y="20" fill="#00e5ff">SCORE</text>
+<text class="hud" x="30"  y="32" fill="#ffffff">04280</text>
+<text class="hud" x="280" y="20" fill="#00e5ff" text-anchor="middle">HI-SCORE</text>
+<text class="hud" x="280" y="32" fill="#ffffff"  text-anchor="middle">12600</text>
+<text class="hud" x="530" y="20" fill="#00e5ff">LEVEL</text>
+<text class="hud" x="530" y="32" fill="#ffffff">03</text>
+<text class="hud" x="630" y="20" fill="#00e5ff">LIVES</text>
+<text class="hud" x="630" y="32" fill="#ffffff">3</text>
+
+<!-- mystery ship -->
+<g class="mystery" transform="translate(0,38)">
+  <rect x="6"  y="4"  width="12" height="2" fill="#ff3860"/>
+  <rect x="2"  y="6"  width="20" height="2" fill="#ff3860"/>
+  <rect x="0"  y="8"  width="24" height="6" fill="#ff3860"/>
+  <rect x="4"  y="14" width="4"  height="2" fill="#ff3860"/>
+  <rect x="16" y="14" width="4"  height="2" fill="#ff3860"/>
+</g>
+
+<!-- aliens -->
+<g class="aliens-group">
+  <!-- row 1 purple -->
+  <g transform="translate(80,50)"><rect x="3" y="0" width="10" height="2" class="alien-a"/><rect x="1" y="2" width="14" height="2" class="alien-a"/><rect x="0" y="4" width="16" height="6" class="alien-a"/><rect x="2" y="10" width="4" height="2" class="alien-a"/><rect x="10" y="10" width="4" height="2" class="alien-a"/><rect x="0" y="12" width="3" height="2" class="alien-a"/><rect x="13" y="12" width="3" height="2" class="alien-a"/></g>
+  <g transform="translate(130,50)"><rect x="3" y="0" width="10" height="2" class="alien-a"/><rect x="1" y="2" width="14" height="2" class="alien-a"/><rect x="0" y="4" width="16" height="6" class="alien-a"/><rect x="2" y="10" width="4" height="2" class="alien-a"/><rect x="10" y="10" width="4" height="2" class="alien-a"/><rect x="0" y="12" width="3" height="2" class="alien-a"/><rect x="13" y="12" width="3" height="2" class="alien-a"/></g>
+  <g transform="translate(180,50)"><rect x="3" y="0" width="10" height="2" class="alien-a"/><rect x="1" y="2" width="14" height="2" class="alien-a"/><rect x="0" y="4" width="16" height="6" class="alien-a"/><rect x="2" y="10" width="4" height="2" class="alien-a"/><rect x="10" y="10" width="4" height="2" class="alien-a"/><rect x="0" y="12" width="3" height="2" class="alien-a"/><rect x="13" y="12" width="3" height="2" class="alien-a"/></g>
+  <g transform="translate(230,50)"><rect x="3" y="0" width="10" height="2" class="alien-a"/><rect x="1" y="2" width="14" height="2" class="alien-a"/><rect x="0" y="4" width="16" height="6" class="alien-a"/><rect x="2" y="10" width="4" height="2" class="alien-a"/><rect x="10" y="10" width="4" height="2" class="alien-a"/><rect x="0" y="12" width="3" height="2" class="alien-a"/><rect x="13" y="12" width="3" height="2" class="alien-a"/></g>
+  <g transform="translate(280,50)"><rect x="3" y="0" width="10" height="2" class="alien-a"/><rect x="1" y="2" width="14" height="2" class="alien-a"/><rect x="0" y="4" width="16" height="6" class="alien-a"/><rect x="2" y="10" width="4" height="2" class="alien-a"/><rect x="10" y="10" width="4" height="2" class="alien-a"/><rect x="0" y="12" width="3" height="2" class="alien-a"/><rect x="13" y="12" width="3" height="2" class="alien-a"/></g>
+  <g transform="translate(330,50)"><rect x="3" y="0" width="10" height="2" class="alien-a"/><rect x="1" y="2" width="14" height="2" class="alien-a"/><rect x="0" y="4" width="16" height="6" class="alien-a"/><rect x="2" y="10" width="4" height="2" class="alien-a"/><rect x="10" y="10" width="4" height="2" class="alien-a"/><rect x="0" y="12" width="3" height="2" class="alien-a"/><rect x="13" y="12" width="3" height="2" class="alien-a"/></g>
+  <g transform="translate(380,50)"><rect x="3" y="0" width="10" height="2" class="alien-a"/><rect x="1" y="2" width="14" height="2" class="alien-a"/><rect x="0" y="4" width="16" height="6" class="alien-a"/><rect x="2" y="10" width="4" height="2" class="alien-a"/><rect x="10" y="10" width="4" height="2" class="alien-a"/><rect x="0" y="12" width="3" height="2" class="alien-a"/><rect x="13" y="12" width="3" height="2" class="alien-a"/></g>
+  <g transform="translate(430,50)"><rect x="3" y="0" width="10" height="2" class="alien-a"/><rect x="1" y="2" width="14" height="2" class="alien-a"/><rect x="0" y="4" width="16" height="6" class="alien-a"/><rect x="2" y="10" width="4" height="2" class="alien-a"/><rect x="10" y="10" width="4" height="2" class="alien-a"/><rect x="0" y="12" width="3" height="2" class="alien-a"/><rect x="13" y="12" width="3" height="2" class="alien-a"/></g>
+  <!-- row 2 cyan -->
+  <g transform="translate(80,78)"><rect x="0" y="4" width="2" height="4" class="alien-b"/><rect x="14" y="4" width="2" height="4" class="alien-b"/><rect x="2" y="2" width="12" height="2" class="alien-b"/><rect x="2" y="4" width="12" height="6" class="alien-b"/><rect x="4" y="10" width="8" height="2" class="alien-b"/><rect x="2" y="12" width="4" height="2" class="alien-b"/><rect x="10" y="12" width="4" height="2" class="alien-b"/></g>
+  <g transform="translate(130,78)"><rect x="0" y="4" width="2" height="4" class="alien-b"/><rect x="14" y="4" width="2" height="4" class="alien-b"/><rect x="2" y="2" width="12" height="2" class="alien-b"/><rect x="2" y="4" width="12" height="6" class="alien-b"/><rect x="4" y="10" width="8" height="2" class="alien-b"/><rect x="2" y="12" width="4" height="2" class="alien-b"/><rect x="10" y="12" width="4" height="2" class="alien-b"/></g>
+  <g transform="translate(180,78)"><rect x="0" y="4" width="2" height="4" class="alien-b"/><rect x="14" y="4" width="2" height="4" class="alien-b"/><rect x="2" y="2" width="12" height="2" class="alien-b"/><rect x="2" y="4" width="12" height="6" class="alien-b"/><rect x="4" y="10" width="8" height="2" class="alien-b"/><rect x="2" y="12" width="4" height="2" class="alien-b"/><rect x="10" y="12" width="4" height="2" class="alien-b"/></g>
+  <g transform="translate(230,78)"><rect x="0" y="4" width="2" height="4" class="alien-b"/><rect x="14" y="4" width="2" height="4" class="alien-b"/><rect x="2" y="2" width="12" height="2" class="alien-b"/><rect x="2" y="4" width="12" height="6" class="alien-b"/><rect x="4" y="10" width="8" height="2" class="alien-b"/><rect x="2" y="12" width="4" height="2" class="alien-b"/><rect x="10" y="12" width="4" height="2" class="alien-b"/></g>
+  <g transform="translate(280,78)"><rect x="0" y="4" width="2" height="4" class="alien-b"/><rect x="14" y="4" width="2" height="4" class="alien-b"/><rect x="2" y="2" width="12" height="2" class="alien-b"/><rect x="2" y="4" width="12" height="6" class="alien-b"/><rect x="4" y="10" width="8" height="2" class="alien-b"/><rect x="2" y="12" width="4" height="2" class="alien-b"/><rect x="10" y="12" width="4" height="2" class="alien-b"/></g>
+  <g transform="translate(330,78)"><rect x="0" y="4" width="2" height="4" class="alien-b"/><rect x="14" y="4" width="2" height="4" class="alien-b"/><rect x="2" y="2" width="12" height="2" class="alien-b"/><rect x="2" y="4" width="12" height="6" class="alien-b"/><rect x="4" y="10" width="8" height="2" class="alien-b"/><rect x="2" y="12" width="4" height="2" class="alien-b"/><rect x="10" y="12" width="4" height="2" class="alien-b"/></g>
+  <g transform="translate(380,78)"><rect x="0" y="4" width="2" height="4" class="alien-b"/><rect x="14" y="4" width="2" height="4" class="alien-b"/><rect x="2" y="2" width="12" height="2" class="alien-b"/><rect x="2" y="4" width="12" height="6" class="alien-b"/><rect x="4" y="10" width="8" height="2" class="alien-b"/><rect x="2" y="12" width="4" height="2" class="alien-b"/><rect x="10" y="12" width="4" height="2" class="alien-b"/></g>
+  <g transform="translate(430,78)"><rect x="0" y="4" width="2" height="4" class="alien-b"/><rect x="14" y="4" width="2" height="4" class="alien-b"/><rect x="2" y="2" width="12" height="2" class="alien-b"/><rect x="2" y="4" width="12" height="6" class="alien-b"/><rect x="4" y="10" width="8" height="2" class="alien-b"/><rect x="2" y="12" width="4" height="2" class="alien-b"/><rect x="10" y="12" width="4" height="2" class="alien-b"/></g>
+  <!-- row 3 green -->
+  <g transform="translate(80,106)"><rect x="4" y="0" width="8" height="2" class="alien-c"/><rect x="2" y="2" width="12" height="6" class="alien-c"/><rect x="0" y="4" width="16" height="2" class="alien-c"/><rect x="2" y="8" width="4" height="2" class="alien-c"/><rect x="10" y="8" width="4" height="2" class="alien-c"/><rect x="0" y="10" width="4" height="2" class="alien-c"/><rect x="12" y="10" width="4" height="2" class="alien-c"/></g>
+  <g transform="translate(130,106)"><rect x="4" y="0" width="8" height="2" class="alien-c"/><rect x="2" y="2" width="12" height="6" class="alien-c"/><rect x="0" y="4" width="16" height="2" class="alien-c"/><rect x="2" y="8" width="4" height="2" class="alien-c"/><rect x="10" y="8" width="4" height="2" class="alien-c"/><rect x="0" y="10" width="4" height="2" class="alien-c"/><rect x="12" y="10" width="4" height="2" class="alien-c"/></g>
+  <g transform="translate(180,106)"><rect x="4" y="0" width="8" height="2" class="alien-c"/><rect x="2" y="2" width="12" height="6" class="alien-c"/><rect x="0" y="4" width="16" height="2" class="alien-c"/><rect x="2" y="8" width="4" height="2" class="alien-c"/><rect x="10" y="8" width="4" height="2" class="alien-c"/><rect x="0" y="10" width="4" height="2" class="alien-c"/><rect x="12" y="10" width="4" height="2" class="alien-c"/></g>
+  <g transform="translate(230,106)"><rect x="4" y="0" width="8" height="2" class="alien-c"/><rect x="2" y="2" width="12" height="6" class="alien-c"/><rect x="0" y="4" width="16" height="2" class="alien-c"/><rect x="2" y="8" width="4" height="2" class="alien-c"/><rect x="10" y="8" width="4" height="2" class="alien-c"/><rect x="0" y="10" width="4" height="2" class="alien-c"/><rect x="12" y="10" width="4" height="2" class="alien-c"/></g>
+  <g transform="translate(280,106)"><rect x="4" y="0" width="8" height="2" class="alien-c"/><rect x="2" y="2" width="12" height="6" class="alien-c"/><rect x="0" y="4" width="16" height="2" class="alien-c"/><rect x="2" y="8" width="4" height="2" class="alien-c"/><rect x="10" y="8" width="4" height="2" class="alien-c"/><rect x="0" y="10" width="4" height="2" class="alien-c"/><rect x="12" y="10" width="4" height="2" class="alien-c"/></g>
+  <g transform="translate(330,106)"><rect x="4" y="0" width="8" height="2" class="alien-c"/><rect x="2" y="2" width="12" height="6" class="alien-c"/><rect x="0" y="4" width="16" height="2" class="alien-c"/><rect x="2" y="8" width="4" height="2" class="alien-c"/><rect x="10" y="8" width="4" height="2" class="alien-c"/><rect x="0" y="10" width="4" height="2" class="alien-c"/><rect x="12" y="10" width="4" height="2" class="alien-c"/></g>
+  <g transform="translate(380,106)"><rect x="4" y="0" width="8" height="2" class="alien-c"/><rect x="2" y="2" width="12" height="6" class="alien-c"/><rect x="0" y="4" width="16" height="2" class="alien-c"/><rect x="2" y="8" width="4" height="2" class="alien-c"/><rect x="10" y="8" width="4" height="2" class="alien-c"/><rect x="0" y="10" width="4" height="2" class="alien-c"/><rect x="12" y="10" width="4" height="2" class="alien-c"/></g>
+  <g transform="translate(430,106)"><rect x="4" y="0" width="8" height="2" class="alien-c"/><rect x="2" y="2" width="12" height="6" class="alien-c"/><rect x="0" y="4" width="16" height="2" class="alien-c"/><rect x="2" y="8" width="4" height="2" class="alien-c"/><rect x="10" y="8" width="4" height="2" class="alien-c"/><rect x="0" y="10" width="4" height="2" class="alien-c"/><rect x="12" y="10" width="4" height="2" class="alien-c"/></g>
+</g>
+
+<!-- shields -->
+<rect class="shield" x="90"  y="140" width="30" height="14" rx="2"/>
+<rect class="shield" x="200" y="140" width="30" height="14" rx="2"/>
+<rect class="shield" x="310" y="140" width="30" height="14" rx="2"/>
+<rect class="shield" x="420" y="140" width="30" height="14" rx="2"/>
+
+<!-- ground -->
+<rect x="20" y="162" width="640" height="1" fill="#00ff88" opacity="0.4"/>
+
+<!-- player cannon -->
+<g transform="translate(248,148)">
+  <rect x="6"  y="0"  width="4"  height="6"  class="cannon"/>
+  <rect x="2"  y="6"  width="12" height="4"  class="cannon"/>
+  <rect x="0"  y="10" width="16" height="4"  class="cannon"/>
+</g>
+
+<!-- bullet -->
+<g class="bullet" transform="translate(255,144)">
+  <rect x="0" y="0" width="2" height="10" fill="#ffffff"/>
+</g>
+
+<!-- bottom HUD -->
+<text class="hud" x="30"  y="182" fill="#a259ff">3</text>
+<text class="hud" x="340" y="182" fill="#444444" text-anchor="middle">— INSERT COIN —</text>
+<text class="hud" x="650" y="182" fill="#00e5ff" text-anchor="end">github.com/enriquehernandezit-oss</text>
+</svg>
