@@ -6,7 +6,10 @@ Finance meets AI. I build agentic AI tools that automate research, surface marke
 
 ---
 
-### 📬 Let's connect
+<img src="https://raw.githubusercontent.com/enriquehernandezit-oss/enriquehernandezit-oss/main/invaders.svg" alt="Space Invaders" width="100%"/>
+
+
+### Let's connect
 
 - 💼 [LinkedIn](https://linkedin.com/in/enriquechernandez)
 - 📧 enriquehernandezit@gmail.com
