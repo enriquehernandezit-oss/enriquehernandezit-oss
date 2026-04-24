@@ -6,18 +6,6 @@ Finance meets AI. I build agentic AI tools that automate research, surface marke
 
 ---
 
-### 🔨 What I'm building
-
-| Project | What it does | Stack |
-|---|---|---|
-| [EarlySignal](https://earlysignal.streamlit.app) | Spots emerging market trends before they go mainstream | Python · Claude API · Tavily · Reddit |
-| [CultureDelta](https://culture-delta.streamlit.app) | Maps how markets and culture shift between two time periods | Python · Claude API · ThreadPoolExecutor |
-| Competitive Intel Dashboard | 5-agent pipeline that automates company research | Coming soon |
-| MoodWave | AI music discovery driven by emotional state | Coming soon |
-| LittleLeap | AI early childhood platform — deployed at a real center in the DR | Coming soon |
-
----
-
 ### 📬 Let's connect
 
 - 💼 [LinkedIn](https://linkedin.com/in/enriquechernandez)
